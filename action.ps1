@@ -290,7 +290,7 @@ function Publish-ToCheckRun {
         $url = "https://git.i.mercedes-benz.com/api/v3/repos/$repoFullName/check-runs"
         $hdr = @{
             Accept = 'application/vnd.github.antiope-preview+json'
-            Authorization = "token $ghToken"
+            Authorization = "Bearer $ghToken"
         }
         $bdy = @{
             name       = $reportName
