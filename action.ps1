@@ -287,7 +287,7 @@ function Publish-ToCheckRun {
         Write-ActionInfo "Resolve Repo Full Name as $repoFullName"
 
         Write-ActionInfo "Adding Check Run"
-        $url = "https://api.github.com/repos/$repoFullName/check-runs"
+        $url = "https://git.i.mercedes-benz.com/api/v3/repos/$repoFullName/check-runs"
         $hdr = @{
             Accept = 'application/vnd.github.antiope-preview+json'
             Authorization = "token $ghToken"
@@ -319,7 +319,7 @@ function Publish-ToGist {
     $gist_token = $inputs.gist_token
     Write-ActionInfo "Resolved Report Gist Name.....: [$reportGistName]"
 
-    $gistsApiUrl = "https://api.github.com/gists"
+    $gistsApiUrl = "https://git.i.mercedes-benz.com/api/v3/gists"
     $apiHeaders = @{
         Accept        = "application/vnd.github.v3+json"
         Authorization = "token $gist_token"
